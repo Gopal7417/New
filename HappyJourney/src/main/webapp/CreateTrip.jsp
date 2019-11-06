@@ -10,70 +10,43 @@
 
         </script>
 
+ <%@taglib tagdir="/WEB-INF/tags" prefix="tag"%>
 
-
- <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>    </head>
+ <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>   
+  </head>
     <body onload="Namesload();FromTo()">
         
-<img src="<c:url value="/resources/images/bus logo.png"/>"align="right" width=20% height= 20%>
-        <br></br><br><br><br><br>
-       <div class="nav">
-
-<ul>
-    <li><a href="AdminMainPage.jsp">PROFILE</a>
-        <ul>
-            <li><a href="AdminChangePswd.jsp" target="_self">Change Password</a></li>
-            <li><a href="Logout.jsp" target="_self">Log Out</a></li>
-        </ul></li>
-<li><a href="AdminMainPage.jsp">TRIPS</a>
-<ul>
-<li><a href="CreateTrip.jsp" target="_self">Create Trips</a></li>
-<li><a href="ViewTrips.jsp"  target="_self">View Trips</a></li>
-<li><a href="canceltrip.jsp"  target="_self">Cancel Trips</a></li>
-</ul></li>
-<li><a href="Customers.jsp">CUSTOMERS</a></li>
-<li><a href="AdminMainPage.jsp">BOOKINGS</a>
-<ul>
-<li><a href="TripWise.jsp" target="_self">Trip Wise</a></li>
-<li><a href="BookingsDateWise.jsp" target="_self">Date Wise</a></li>
-<li><a href="BUSWISE1.jsp" target="_self">Bus Wise</a></li>
-<li><a href="Chart.jsp" target="_self">Chart</a></li>
-
-</ul></li>
-
-<li><a href="Cancellations.jsp">CANCELLATIONS</a></li>
-</ul>
-</div>
+<tag:navbar/>
         <br><br>
         <h3>Create a trip<h3>
-                 <form action="/bus/TicketBooking" method="POST">
+                 <form:form action="" modelAttribute="Trip" method="POST">
                   
                     <table align="center">
                         <tr>
                             <td>
 
-                                <label class="l" style="font-family: Trebuchet MS;">Bus Type:&nbsp&nbsp&nbsp</label><br>
+                                <form:label path="Bus Type" class="l" style="font-family: Trebuchet MS;">Bus Type:&nbsp&nbsp&nbsp</form:label><br>
 
                       
                     
-                                <select id="sBType" name="sBType" onchange="loadBus()"> </select>
+                                <form:select path="bustype" id="sBType" name="sBType" onchange="loadBus()"/> 
 
                                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                             <td>
-                                <label class="l" style="font-family: Trebuchet MS;">Buses:&nbsp&nbsp&nbsp</label><br>
+                                <form:label path="Buses" class="l"  style="font-family: Trebuchet MS;">Buses:&nbsp&nbsp&nbsp</form:label><br>
 
-                                <select id ="sBname"  name="sBname" style="width:250px;"></select> 
+                                <form:select path="regno" id ="regno"  name="sBname" style="width:250px;" /> 
 
 
                                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
                             <td>
-                                <label class="l" style="font-family: Trebuchet MS;">From Stations:&nbsp&nbsp&nbsp</label><br>
-                                  <select id="sFrom" name="sFrom" >  </select>
+                                <form:label path="From Stations" class="l" style="font-family: Trebuchet MS;">From Stations:&nbsp&nbsp&nbsp</form:label><br>
+                                  <select path="station" id="station" name="sFrom" >  </select>
                                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                             <td>
-                                <label class="l" style="font-family: Trebuchet MS;">To Stations:&nbsp&nbsp&nbsp</label><br>
-                                <select id="sTo" name="sTo" onchange="addRow()"></select>
+                                <label class="l" path="To Stations" style="font-family: Trebuchet MS;">To Stations:&nbsp&nbsp&nbsp</label><br>
+                                <form:select path="station" id="station" name="sTo" onchange="addRow()" />
                         </tr>
                         <tr>
 
@@ -101,8 +74,8 @@
 
                     <table align="center">
                         <tr>
-                            <td>From Date <input name ="Fdate" type="date"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-                            <td>To Date<input name ="Tdate" type="date"></td>
+                            <td>From Date <form:input path="Fdate"name ="Fdate" type="date"/> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                            <td>To Date<form:input path="Tdate" name ="Tdate" type="date"/></td>
                         </tr>
                     </table>
                     <br><br>
@@ -114,7 +87,7 @@
                         </tr>
                     </table>
 
-                </form>
+                </form:form>
                 </body>
                 </html>
 
