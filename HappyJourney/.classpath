@@ -34,12 +34,12 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="C:/Users/pennantstaff/Downloads/jstl-1.2.jar">
+	<classpathentry kind="lib" path="C:/Program Files/sqldeveloper/jdbc/lib/ojdbc6.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="C:/Users/pennantstaff/Downloads/ojdbc6.jar">
+	<classpathentry kind="lib" path="C:/Users/pennantstaff/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

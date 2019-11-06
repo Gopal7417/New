@@ -52,7 +52,7 @@
                         <tr>
                             <td>
 
-                                <label class="l" style="font-family: Trebuchet MS;">Buses:&nbsp&nbsp&nbsp</label><br>
+                                <label class="l" style="font-family: Trebuchet MS;">Bus Type:&nbsp&nbsp&nbsp</label><br>
 
                       
                     
@@ -60,7 +60,7 @@
 
                                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                             <td>
-                                <label class="l" style="font-family: Trebuchet MS;">Bus Type:&nbsp&nbsp&nbsp</label><br>
+                                <label class="l" style="font-family: Trebuchet MS;">Buses:&nbsp&nbsp&nbsp</label><br>
 
                                 <select id ="sBname"  name="sBname" style="width:250px;"></select> 
 
