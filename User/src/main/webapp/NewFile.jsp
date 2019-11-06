@@ -16,13 +16,15 @@ $(document).ready(function () {
 		{            
 			success: function (data, status, xhr) {  
 			
-				
+		
 				 $("#kk").append(data);
 				 $("#kk1").append(data);
+				 
 				
+				for(var i in data)
 				 $.each(data, function (index, value) {
-				        
-				        $('#three').append($('<option>').val(value.STAN_ID).text(value.STAN_ID)); 
+				     
+				        $('#three').append($('<option>').val(data[i]).text(data[i])); 
 				    });  
 		              
 		             

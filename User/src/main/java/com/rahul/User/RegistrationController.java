@@ -117,9 +117,13 @@ public class RegistrationController {
 
 	  @RequestMapping(value="/hello")
 	  @ResponseBody
-	  public JSONArray oo() {
+	  public List oo() {
 		  JSONArray jsonArray = rgDAO.names();
-	 return jsonArray;
+		  
+		  
+		  List new1 = rgDAO.getAllUsers();
+		 
+	 return new1;
 	  }
 	  
 	
