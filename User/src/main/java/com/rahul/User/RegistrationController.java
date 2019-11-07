@@ -130,7 +130,7 @@ public class RegistrationController {
 	  @ResponseBody
 	  public void helloWorld(HttpServletRequest request,HttpServletResponse response) throws IOException  {  
        JSONArray jsonArray = rgDAO.names(); 
-       request.getParameter("three");
+       request.getParameter("three"); 
       // System.out.println(uf.getThree());
        System.out.println(jsonArray);
 	    response.getWriter().println(jsonArray);
@@ -138,13 +138,10 @@ public class RegistrationController {
 
 	  @RequestMapping(value = "/some")
 	  @ResponseBody
-	  public void helloWorld1(HttpServletRequest request,HttpServletResponse response) throws IOException  {  
-       JSONArray jsonArray = rgDAO.names(); 
-      // System.out.println(uf.getThree());
-     
-       String from = request.getParameter("from");
-       System.out.println("from");
-	  //  response.getWriter().println(jsonArray);
+	  public void helloWorld1(HttpServletRequest request,HttpServletResponse response)  {  
+		  request.getParameter("b"); 
+       System.out.println(request.getParameter("b"));
+
 	  }
 
 }

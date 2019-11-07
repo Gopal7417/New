@@ -28,15 +28,15 @@
 
         $(document).ready(function () {
 			
-   		 $('#id_btn').click(function(){
-   			var from =("#three").val();
-   		  var dataString = "amount=" + amount + "&from=" + 'from' + "&to=" + to;
+   		 $('#id_btn2').click(function(){
+   		
+   		  
    
 
         $.ajax({
                       type: "POST",
-                      data: dataString,
-                      url: "soe",
+                      data:{ "b": "data1", "c": "data2" },
+                      url: "some",
                       success: function(data){
                      
                   
@@ -65,5 +65,6 @@
 </form:form>
 <p id = "kk" ></p>
  <button id="id_btn">hellooo</button>
+ <button id="id_btn2">hellooo</button>
 </body>
 </html>
