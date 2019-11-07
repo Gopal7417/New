@@ -29,17 +29,17 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/pennantstaff/Downloads/jstl-1.2.jar">
+	<classpathentry exported="true" kind="lib" path="C:/Users/pennantstaff/Downloads/jstl-1.2.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/pennantstaff/Downloads/json-simple-1.1.1.jar">
+	<classpathentry exported="true" kind="lib" path="C:/Users/pennantstaff/Downloads/json-simple-1.1.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/pennantstaff/Downloads/ojdbc6.jar">
+	<classpathentry exported="true" kind="lib" path="C:/Users/pennantstaff/Downloads/ojdbc6.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

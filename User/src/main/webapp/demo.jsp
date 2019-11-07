@@ -17,7 +17,7 @@
 			
 		 $('#ajaxBtn').click(function(){
                   
-			$.getJSON("hello", function(data){
+			$.getJSON("something", function(data){
                                 var data1 = JSON.stringify(data);
                              document.getElementById("kk").innerHTML=data1;
                            
@@ -40,9 +40,20 @@
         <select id="three"> 
       
         </select>
-          
+        
+        
+        
+       <input type="button" id="ajaxBtn" value="press" />
+        <select id="three"> 
+      
+        </select>   
+        
+        
 	<p id="kk">
 	</p>
+	
+	
+	
 </body>
 
 

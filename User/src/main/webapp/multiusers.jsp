@@ -5,7 +5,44 @@
 <html>
 <head>
 	<title>Spring MVC Multi Row Example </title>
-	
+	   <script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+			
+		 $('#id_btn').click(function(){
+                  
+			$.getJSON("something", function(data){
+                                var data1 = JSON.stringify(data);
+                     
+                           
+    $.each(data, function (index, value) {
+        
+        $('#four').append($('<option>').val(value.STAN_ID).text(value.STAN_ID)); 
+    });
+});
+
+			});
+		 });
+
+        $(document).ready(function () {
+			
+   		 $('#id_btn').click(function(){
+   			var from =("#three").val();
+   		  var dataString = "amount=" + amount + "&from=" + 'from' + "&to=" + to;
+   
+
+        $.ajax({
+                      type: "POST",
+                      data: dataString,
+                      url: "soe",
+                      success: function(data){
+                     
+                  
+                  }
+               });});});
+    </script>
 </head>
 
 
@@ -20,8 +57,10 @@
     <form:options items="${usersForm.usersList}" />
 </form:select>
 
+<form:select path="four" >
 
-<input type="submit" value="Save" />
+
+</form:select>
 	
 </form:form>
 <p id = "kk" ></p>
